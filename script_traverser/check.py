@@ -8,7 +8,6 @@ import re
 import os
 import sys
 
-#PATH = 'E:\0.正在处理ing\forFun\check_fft\target_code'
 PATH = 'target_code/'
 TARGET_WORD = r'fft|FFT|Fourier|ft|FT|mesh'
 PATH = '/home/albert/Documents/CODE&PROJECT/GIT_launch_platform/lorcon-old'
@@ -17,6 +16,7 @@ TARGET_WORD = r'authored by albert Z'
 N = 10
 
 def traverse_file( path):
+    print 'SEARCHING PATH:',path
     files = os.listdir(path)
     for fi in files:
         tmp = path+'/'+fi
@@ -27,7 +27,11 @@ def traverse_file( path):
             result = get_urlSet_from_text( text, TARGET_WORD, N)
             if( len(result) != 0):
                 print "FILE_NAME:",tmp
-                print result,"\n"
+                for item in result:
+                    print item,"\n-----"
+                print "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\
+~FILE GAP FILE GAP FILE GAP FILE GAP FIEL GAP~\n\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         elif os.path.isdir( tmp):
             traverse_file( tmp)
             
