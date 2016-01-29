@@ -1,4 +1,4 @@
 Manual
 ========
 
-python stockPredictor -n STOCK_num -o OPEN_PRICE [-d BACKWARD_DAYS]
+python stockPredictor -n STOCK_code -o OPEN_PRICE [-d BACKWARD_DAYS]
