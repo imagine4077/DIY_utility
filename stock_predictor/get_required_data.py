@@ -48,7 +48,7 @@ if __name__ == "__main__":
             print 'Format2:\npython stockPredictor -n STOCK_num -o OPEN_PRICE [-d BACKWARD_DAYS]'
             exit(0)
     print start_d," ",end_d,'\n',BACKWARD,'days'
-    path = '/home/albert/Documents/CODE/SCRIPT/DIY_Utilities/stock_predictor/data/'+ STOCK+'.pkl'
+    path = 'data/'+ STOCK+'.pkl'
     if os.path.isfile( path):
         stock150153 = pd.load( path)
         if Need_Update.need_update( stock150153.index[0]):
